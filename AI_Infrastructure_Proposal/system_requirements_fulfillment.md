@@ -6,51 +6,37 @@
 
 ---
 
-## 1. 24-Hour Model Deployment
+## 1. 24-Hour Model Deployment → Chat + Workflow Integration
 
 ### How THE System Solves It
 
-**Automated Detection & Integration Pipeline**
-- Continuous monitoring of model releases (OpenAI, Anthropic, Meta, Google, etc.)
-- Containerized deployment with standardized interfaces
-- Automated testing, safety validation, and performance benchmarking
-- Blue-green deployment with gradual traffic shifting
+**Automated Pipeline**: Model detection → containerization → validation → deployment
+- New models become available through **chat interface** and **workflow API** simultaneously
+- Standardized interfaces ensure instant integration into existing agentic workflows
+- Zero-downtime deployment maintains service continuity
 
-### System Integration Points
+### Integration Points
 
-- **Model Discovery Service**: Monitors external model releases
-- **API Gateway**: Provides unified access to all models within 24 hours
-- **Container Registry**: Standardized model packaging and deployment
-- **Quality Gates**: Automated validation pipeline
-
-### Architecture Diagram Skeleton
-```
-[Model Release] → [Detection Service] → [Containerization] → [Testing Pipeline] → [Production Deployment] → [API Gateway]
-```
+- **Chat Interface**: New models immediately available for conversational AI
+- **Workflow Engine**: Models auto-registered for automated workflow integration
+- **API Gateway**: Single endpoint serves both chat and workflow requests
 
 ---
 
-## 2. Fine-tuning Infrastructure
+## 2. Fine-Tuning + RAG Infrastructure
 
 ### How THE System Solves It
 
-**Scalable Training Platform**
-- GCP GPU clusters with auto-scaling capabilities
-- Support for LoRA, QLoRA, and full fine-tuning approaches
-- Experiment tracking and model versioning
-- Integration with deployment pipeline
+**Integrated Training Platform**: Fine-tuning directly enhances RAG capabilities
+- Custom models trained on domain-specific data improve retrieval relevance
+- Fine-tuned embedding models create specialized vector representations
+- RAG provides training data context for better model specialization
 
-### System Integration Points
+### Integration Points
 
-- **Compute Orchestration**: Dynamic GPU allocation via GKE
-- **Data Management**: Unified data lake for training datasets
-- **Model Registry**: Version control for fine-tuned models
-- **Workflow Integration**: Seamless deployment of custom models
-
-### Architecture Diagram Skeleton
-```
-[Training Data] → [Preprocessing Pipeline] → [GPU Clusters] → [Model Training] → [Model Registry] → [Deployment Pipeline]
-```
+- **Training Pipeline**: Fine-tuning jobs automatically integrate with RAG workflows
+- **Model Registry**: Tracks relationships between base, fine-tuned, and RAG-optimized models
+- **Vector Store**: Custom embeddings immediately available for enhanced retrieval
 
 ---
 
@@ -82,47 +68,35 @@
 
 ### How THE System Solves It
 
-**Domain-Optimized Model Management**
-- Model registry for general, fine-tuned, and domain-specific models
-- A/B testing framework for performance comparison
-- Resource optimization based on model requirements
-- Integration with DRW-specific workflows
+**Domain-Specific Model Management**: Beyond general-purpose LLMs
+- **Financial Models**: Pre-trained for trading, risk analysis, regulatory compliance
+- **Quantitative Models**: Specialized for numerical analysis and forecasting  
+- **Research Models**: Optimized for document analysis and insight extraction
+- Dynamic resource allocation based on specialized model requirements
 
-### System Integration Points
+### Integration Points
 
-- **Model Catalog**: Centralized registry of all available models
-- **Resource Manager**: Intelligent GPU/CPU allocation
-- **Performance Monitor**: Continuous model evaluation
-- **Workflow Engine**: Domain-specific model routing
-
-### Architecture Diagram Skeleton
-```
-[Model Types] → [Registry Service] → [Resource Allocation] → [A/B Testing] → [Production Serving] → [Performance Analytics]
-```
+- **Model Catalog**: Registry distinguishing specialized from general models
+- **Smart Routing**: Workflows automatically select optimal specialized model
+- **Performance Tracking**: Specialized model effectiveness vs general models
 
 ---
 
-## 5. Ergonomic Workflow Abstractions
+## 5. Ergonomic Agentic Workflow Creation
 
 ### How THE System Solves It
 
-**No-Code Agentic Workflow Builder**
-- Visual drag-and-drop interface for workflow creation
-- Pre-built template library for common DRW use cases
-- High-level abstractions hiding LLM complexity
-- Integration with existing DRW systems and external APIs
+**Agentic vs Regular Workflows**: Autonomous, multi-step, adaptive execution
+- **Agent Memory**: Persistent context across workflow steps and sessions
+- **Planning & Reasoning**: Agents dynamically adjust workflow based on intermediate results
+- **Tool Integration**: Agents access APIs, databases, and external systems autonomously
+- **No-Code Builder**: Visual interface abstracts agent complexity from users
 
-### System Integration Points
+### Integration Points
 
-- **Workflow Designer**: Visual builder interface
-- **Component Library**: Reusable workflow building blocks
-- **Orchestration Engine**: Workflow execution and state management
-- **Integration Hub**: Connectors to DRW and external systems
-
-### Architecture Diagram Skeleton
-```
-[User Interface] → [Template Library] → [Workflow Builder] → [Orchestration Engine] → [Model Services] → [Business Systems]
-```
+- **Agent Runtime**: Manages agent state, memory, and decision-making
+- **Tool Registry**: Available functions and APIs for agent use
+- **Workflow Templates**: Pre-built agentic patterns for common use cases
 
 ---
 
