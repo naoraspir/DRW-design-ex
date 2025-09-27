@@ -1,6 +1,6 @@
 # DRW AI Infrastructure Proposal
 
-*Naor Aspir - AI Platform Architecture*
+**Naor Aspir - AI Platform Architecture**
 
 ---
 
@@ -12,7 +12,8 @@
 
 **Core Architecture**: A 4-layer unified platform consisting of User Layer (chat interface + visual workflow builder + admin console), API Gateway (single entry point routing), AI Services (model runtime + RAG engine + workflow engine as microservices), and Infrastructure (Kubernetes + managed GCP AI services + monitoring).
 
-**Key Benefits**: 
+**Key Benefits**:
+
 - 24-hour model deployment with automated pipeline from detection to chat and workflow availability
 - RAG provides immediate domain knowledge while fine-tuning runs in background for improved accuracy
 - Specialized models for financial, quantitative, and research workflows with intelligent routing
@@ -33,21 +34,25 @@ This solution leverages **Google Cloud Platform (GCP)** to maximize AI/ML capabi
 ### 4-Layer Architecture
 
 **User Experience Layer**
+
 - Chat Interface: Direct model interaction with conversation history and context
 - Workflow Builder: Drag-and-drop visual interface for creating agentic workflows  
 - Admin Console: Model management, monitoring, and system configuration
 
 **API Gateway & Orchestration**
+
 - Unified API Gateway: Single entry point with 24-hour model integration pipeline
 - Authentication, rate limiting, load balancing, and intelligent request routing
 - Handles both real-time chat interactions and automated workflow execution
 
 **Core AI Services Layer**
+
 - **Model Runtime**: LLM serving with auto-scaling, A/B testing, and health monitoring. Handles both general-purpose and specialized models (financial, quantitative, research) with dynamic resource allocation
 - **RAG Engine**: Vector storage, retrieval, embeddings, and knowledge-powered generation
 - **Workflow Engine**: Agentic chains with state management, memory persistence, and error handling
 
 **Infrastructure Layer**
+
 - Compute Cluster: Kubernetes clusters with GPU/CPU pools and auto-scaling
 - Data Platform: Data lake, feature store, and model registry with version control
 - Observability: Comprehensive monitoring, logging, and alerting across all services
