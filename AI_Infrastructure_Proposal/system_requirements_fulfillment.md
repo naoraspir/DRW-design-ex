@@ -27,10 +27,11 @@
 
 ### How THE System Solves It
 
-**Integrated Training Platform**: Fine-tuning directly enhances RAG capabilities
-- Custom models trained on domain-specific data improve retrieval relevance
-- Fine-tuned embedding models create specialized vector representations
-- RAG provides training data context for better model specialization
+**Integrated Training Platform**: RAG provides immediate value, fine-tuning improves over time
+
+- RAG delivers instant domain knowledge from uploaded documents  
+- Fine-tuning processes run in background (2-8 hours) to improve accuracy
+- Custom embeddings enhance retrieval precision through batch optimization
 
 ### Integration Points
 
